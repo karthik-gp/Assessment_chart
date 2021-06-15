@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+
+  <!-- chart JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js" integrity="sha512-VCHVc5miKoln972iJPvkQrUYYq7XpxXzvqNfiul1H4aZDwGBGC0lq373KNleaB2LpnC2a/iNfE5zoRYmB4TRDQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  </script>
+
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/94ada5fd72.js" crossorigin="anonymous"></script>
+
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Staatliches&family=Stint+Ultra+Condensed&display=swap" rel="stylesheet">
+
+  <!-- bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <title>myChat</title>
+</head>
+
+<body>
+
+  <!-- navbar code -->
+  <nav class="navbar navbar-expand-lg navbar-light navbar-bg">
+    <i class="fas fa-lightbulb nav-img"></i>
+    <a class="navbar-brand electric" href="#">Electric</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link navbar-text" href="#">FREEZER TEMPERATURE MONITORING SYSTEM</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <div class="dropdown-btn">
+
+    <select class="form-control btn-sm browser-default dropdown1" id="dd1">
+
+      <option value="" selected="selected">Freezer 1</option>
+      <option value="dps2">Freezer 2</option>
+      <option value="dps3">Freezer 3</option>
+    </select>
+  </div>
+
+  <!-- two doughnut one line one difference -->
+  <div class="flex-container">
+
+    <div class="pie">
+      <!-- first doughnut -->
+      <p class="pie-temp">Temperature</p>
+      <hr>
+      <div class="pie-container">
+        <canvas id="pie-chart"></canvas>
+      </div>
+      <p class="temp">70</p>
+    </div>
+
+    <div class="pie-2">
+      <!-- second doughnut -->
+      <p class="pie-current">Current</p>
+      <hr>
+      <div class="pie-container2">
+        <canvas id="pie-chart2"></canvas>
+      </div>
+      <p class="curr">60</p>
+    </div>
+
+    <div class="line1">
+      <p class="line1-curr">Current Consumption</p>
+      <hr>
+      <!-- dropdown -->
+      <select class="form-control btn-sm browser-default dropdown" id="dd2">
+
+        <option value="" selected="selected">10min</option>
+        <option value="dps2">20min</option>
+        <option value="dps3">30min</option>
+      </select>
+
+      <!-- line chart -->
+      <div class="container">
+        <canvas id="line-chart"></canvas>
+      </div>
+    </div>
+
+    <!-- difference -->
+    <div class="box">
+
+
+      <div class="box-1">
+        <p class="Date">Date</p>
+        <p class="D-text">12 May 2020 at 14:00hrs</p>
+        <p class="D-text">09 May 2020 at 18:20hrs</p>
+      </div>
+
+      <div class="box-2">
+        <h3 class="Events">Events</h3>
+        <p class="Door">Door Opened</p>
+        <p class="Door">Temperature cross limit</p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- one line one bar graph -->
+  <div class="flex-container2">
+
+    <div class="line2">
+      <!-- dropdown -->
+      <select class="form-control btn-sm browser-default dropdown" id="dd3">
+
+        <option value="" selected="selected">10min</option>
+
+        <option value="dps4">20min</option>
+        <option value="dps5">30min</option>
+      </select>
+
+      <!-- line chart2 -->
+      <div class="container">
+        <canvas id="line-chart2"></canvas>
+      </div>
+    </div>
+
+    <div class="bar-graph">
+      <select class="form-control btn-sm browser-default dropdown" id="dd4">
+
+        <option value="" selected="selected">10min</option>
+
+        <option value="dps8">20min</option>
+        <option value="dps9">30min</option>
+      </select>
+
+      <!-- bar graph -->
+      <div class="container">
+        <canvas id="myChart"></canvas>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- index.js -->
+  <script src="index.js" charset="utf-8"></script>
+
+
+</body>
+
+</html>

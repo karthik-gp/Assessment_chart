@@ -1,0 +1,228 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ADD8E6;
+}
+
+/* navbar */
+.navbar-bg {
+  background-color: #2E8BC0;
+}
+
+.nav-img {
+  color: yellow;
+  font-size: 40px;
+  margin-left: 10px;
+}
+
+.electric {
+  margin-left: 3px;
+  font-size: 30px;
+}
+
+.navbar-text {
+  margin-left: 40vh;
+  font-family: 'Staatliches', cursive;
+  font-family: 'Stint Ultra Condensed', cursive;
+  font-size: 5vh;
+  font-weight: 500;
+}
+
+/* dropdown button */
+.dropdown-btn {
+  display: flex;
+}
+
+.dropdown {
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: 20px;
+  width: 15vh;
+  background-color: #C0C0C0;
+}
+
+.dropdown1 {
+  margin-left: 5vh;
+  margin-top: 8vh;
+  width: 15vh;
+  background-color: #C0C0C0;
+}
+
+/* containers */
+.flex-container, .flex-container2 {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.flex-container2 {
+  margin-bottom: 20vh;
+}
+
+/* doughnut */
+.pie {
+  margin-left: 1vh;
+  display: inline-block;
+  background-color: white;
+  border-radius: 10px;
+  /* blue outline */
+  box-shadow: 0px 0px 5px 8px rgba(24, 154, 180, 0.75);
+  -webkit-box-shadow: 0px 0px 5px 8px rgba(24, 154, 180, 0.75);
+  -moz-box-shadow: 0px 0px 5px 8px rgba(24, 154, 180, 0.75);
+}
+
+.pie-2 {
+  margin-left: 4.5vh;
+  display: inline-block;
+  background-color: white;
+  border-radius: 10px;
+  /* blue outline */
+  box-shadow: 0px 0px 5px 8px rgba(24, 154, 180, 0.75);
+  -webkit-box-shadow: 0px 0px 5px 8px rgba(24, 154, 180, 0.75);
+  -moz-box-shadow: 0px 0px 5px 8px rgba(24, 154, 180, 0.75);
+}
+
+.pie-container, .pie-container2 {
+  margin: 5px;
+  display: flex;
+  height: 220px;
+  width: 220px;
+  transform: rotate(-165deg);
+}
+
+.pie-temp, .pie-current , .line1-curr , .alert{
+  text-align: center;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.temp, .curr {
+  text-align: center;
+  font-weight: bold;
+}
+
+/* line chart */
+.line1 {
+  margin-left: 4.5vh;
+  display: inline-block;
+  background-color: white;
+  border-radius: 10px;
+  /* blue outline */
+  box-shadow: 0px 0px 5px 8px rgba(24, 154, 180, 0.75);
+  -webkit-box-shadow: 0px 0px 5px 8px rgba(24, 154, 180, 0.75);
+  -moz-box-shadow: 0px 0px 5px 8px rgba(24, 154, 180, 0.75);
+}
+
+.line2 {
+  margin: 10px;
+  height: 45vh;
+  background-color: white;
+  border-radius: 10px;
+  /* blue outline */
+  box-shadow: 0px 0px 5px 8px rgba(24, 154, 180, 0.75);
+  -webkit-box-shadow: 0px 0px 5px 8px rgba(24, 154, 180, 0.75);
+  -moz-box-shadow: 0px 0px 5px 8px rgba(24, 154, 180, 0.75);
+}
+
+.container {
+  width: 400px;
+  margin-top: 20px;
+}
+
+/* difference */
+.box {
+  width: 20vw;
+  margin-left: 4.5vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-gap: 1em;
+  background-color: white;
+  border-radius: 10px;
+  overflow-y: scroll;
+  /* blue outline */
+  box-shadow: 0px 0px 5px 8px rgba(24, 154, 180, 0.75);
+  -webkit-box-shadow: 0px 0px 5px 8px rgba(24, 154, 180, 0.75);
+  -moz-box-shadow: 0px 0px 5px 8px rgba(24, 154, 180, 0.75);
+}
+
+.Date {
+  margin-left: 15px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.D-text {
+  text-align: center;
+  margin-left: 10px;
+  max-width: 55%;
+  line-height: 1.1;
+}
+
+.Events {
+  margin-right: 15px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.Door {
+  margin-top: 20px;
+  max-width: 55%;
+  line-height: 1.1;
+}
+
+/* bar graph */
+.bar-graph {
+  height: 45vh;
+  margin: 10px;
+  background-color: white;
+  border-radius: 10px;
+  /* blue outline */
+  box-shadow: 0px 0px 5px 8px rgba(24, 154, 180, 0.75);
+  -webkit-box-shadow: 0px 0px 5px 8px rgba(24, 154, 180, 0.75);
+  -moz-box-shadow: 0px 0px 5px 8px rgba(24, 154, 180, 0.75);
+}
+
+/* media query */
+@media only screen and (max-width:1162px) {
+  .box {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width:1183px) {
+  .pie, .pie-2, .line1, .line2, .box, .bar-graph {
+    margin: 15px;
+  }
+}
+
+@media only screen and (max-width:605px) {
+  .navbar-text {
+    text-align: center;
+    margin-left: 10px;
+  }
+}
+
+@media only screen and (max-width:516px) {
+  .pie, .pie-2 {
+    width: 80%;
+  }
+
+  .pie-container, .pie-container2 {
+    margin-left: 16vh;
+  }
+}
+
+@media only screen and (max-width:598px) {
+  .box {
+    width: 80%;
+  }
+
+  .dropdown-btn {
+    justify-content: center;
+  }
+}
